@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "search-trends"
+version = "0.1.0"
+description = "Package for FinMango search trends analytics"
+authors = ["ramosaj1 <anthonyjoeramos@gmail.com>"]
+readme = "README.md"
+packages = [{include = "search_trends"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.2.2"
+google-api-python-client = "^2.136.0"
+matplotlib = "^3.9.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
