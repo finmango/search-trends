@@ -53,7 +53,7 @@ class Timeline :
                                                     timelineResolution=frequency,
                                                     geoRestriction_region=geo_restriction_option)
         
-        return pd.DataFrame(req[1:],columns=req[0]).rename(topics,axis=1)
+        return pd.DataFrame(req[1:],columns=req[0])
         
 
 
