@@ -54,7 +54,36 @@ class Timeline :
                                                     geoRestriction_region=geo_restriction_option)
         
         return pd.DataFrame(req[1:],columns=req[0])
+
+
+    def get_related(
+            self,
+            term: str,
+            geography: str,
+            start_date: str,
+            end_date: str,
+            type: str
+    ):
+        '''
+        Queries related topics or queries based off of restrictions
         
+        '''
+        if type == 'topic':
+            return self.service.getTopTopics(
+                term= term, 
+                restriction_geo = geography,
+                restrictions_startDate=start_date,
+                restrictions_endDate=end_date,
+            ).execute()
+
+        else:
+            return self.service.getTopQueries(
+                term= term, 
+                restriction_geo = geography,
+                restrictions_startDate=start_date,
+                restrictions_endDate=end_date,
+
+            ).execute()
 
 
 
