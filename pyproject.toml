@@ -12,7 +12,12 @@ pandas = "^2.2.2"
 google-api-python-client = "^2.136.0"
 matplotlib = "^3.9.1"
 pytest = "^8.2.2"
+click = "^8.1.7"
 
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.1"
+pytest-mock = "^3.14.0"
 
 [build-system]
 requires = ["poetry-core"]
